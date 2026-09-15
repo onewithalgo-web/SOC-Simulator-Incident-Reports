@@ -1,6 +1,8 @@
 # SOC Simulator — Incident Triage Reports
 
-📄 **[Download the printable PDF version](SOC_Simulator_Incident_Reports.pdf)** — all 9 reports in one document, recruiter-friendly.
+📄 **[Download the combined PDF](SOC_Simulator_Incident_Reports.pdf)** — all 9 summaries in one document, recruiter-friendly.
+
+📑 **Full per-operation incident reports** — each individual PDF (linked in the table below) follows a full SOC report template: metadata, executive summary, task-by-task triage, VirusTotal threat-intel checks, timeline, IOCs, a STIX 2.1 bundle, MITRE ATT&CK mapping, containment and recommendations, and real screenshots of the SOC Simulator evidence.
 
 Analyst write-ups for nine hands-on SOC investigations completed on [SOC Simulator](https://www.socsimulator.com), a browser-based training platform that places you inside realistic SIEM, XDR, email and cloud-audit consoles to investigate scenarios mapped to the MITRE ATT&CK framework.
 
@@ -8,17 +10,17 @@ Each report below documents the scenario, the investigative approach taken acros
 
 ## Reports
 
-| # | Operation | Attack Type | Tools | Score |
-|---|-----------|-------------|-------|---------|
-| 1 | [StealC: Cheat Tool to Emptied Wallet](reports/01-stealc-cheat-tool-wallet-theft.md) | Infostealer via trojanized download | SIEM, XDR | 6/6 tasks |
-| 2 | [Entra ID Device Code Phishing: Token Theft](reports/02-entra-id-device-code-phishing.md) | OAuth device-code phishing | SIEM, Cloud audit, Email | 7/7 tasks, 88.1% |
-| 3 | [Fake Zoom to Ransomware: The Social Engineering Pipeline](reports/03-fake-zoom-to-ransomware.md) | Multi-stage loader chain to ransomware | SIEM, XDR, Firewall | 10/10 tasks, 92.5% |
-| 4 | [Credential Harvesting: The Lookalike Login](reports/04-credential-harvesting-lookalike-login.md) | AiTM credential phishing | SIEM | 7/7 tasks, 43.17% |
-| 5 | [MFA Fatigue: The Notification Flood](reports/05-mfa-fatigue-notification-flood.md) | MFA fatigue / push-bombing | SIEM, XDR | 6/6 tasks, 36.25% |
-| 6 | [ClickFix: The Fake CAPTCHA Trap](reports/06-clickfix-fake-captcha-trap.md) | Paste-and-run social engineering | SIEM, XDR | 5/5 tasks, 70.83% |
-| 7 | [QR Code Phishing: Scan to Compromise](reports/07-qr-code-phishing-scan-to-compromise.md) | Quishing + AiTM session theft | SIEM | 6/6 tasks, 100% |
-| 8 | [Finance Mailbox Takeover at MegaCorp Logistics](reports/08-finance-mailbox-takeover.md) | Endpoint compromise to BEC | SIEM, XDR, Email | 8/8 tasks, 56.08% |
-| 9 | [Cloud Identity Under Siege](reports/09-cloud-identity-under-siege.md) | Cross-service cloud intrusion | SIEM, XDR, Firewall, Cloud audit | 8/8 tasks, 48.71% |
+| # | Operation | Attack Type | Tools | Score | Full report (PDF) |
+|---|-----------|-------------|-------|---------|-------------------|
+| 1 | [StealC: Cheat Tool to Emptied Wallet](reports/01-stealc-cheat-tool-wallet-theft.md) | Infostealer via trojanized download | SIEM, XDR | 6/6 tasks | [PDF](Mbanjwa_May26_SOCTriage_Op01_Easy.pdf) |
+| 2 | [Entra ID Device Code Phishing: Token Theft](reports/02-entra-id-device-code-phishing.md) | OAuth device-code phishing | SIEM, Cloud audit, Email | 7/7 tasks, 88.1% | [PDF](Mbanjwa_May26_SOCTriage_Op02_Intermediate.pdf) |
+| 3 | [Fake Zoom to Ransomware: The Social Engineering Pipeline](reports/03-fake-zoom-to-ransomware.md) | Multi-stage loader chain to ransomware | SIEM, XDR, Firewall | 10/10 tasks, 92.5% | [PDF](Mbanjwa_May26_SOCTriage_Op03_Advanced_2.pdf) |
+| 4 | [Credential Harvesting: The Lookalike Login](reports/04-credential-harvesting-lookalike-login.md) | AiTM credential phishing | SIEM | 7/7 tasks, 43.17% | [PDF](Mbanjwa_May26_SOCTriage_Op04_Easy.pdf) |
+| 5 | [MFA Fatigue: The Notification Flood](reports/05-mfa-fatigue-notification-flood.md) | MFA fatigue / push-bombing | SIEM, XDR | 6/6 tasks, 36.25% | [PDF](Mbanjwa_May26_SOCTriage_Op05_Easy.pdf) |
+| 6 | [ClickFix: The Fake CAPTCHA Trap](reports/06-clickfix-fake-captcha-trap.md) | Paste-and-run social engineering | SIEM, XDR | 5/5 tasks, 70.83% | [PDF](Mbanjwa_May26_SOCTriage_Op06_Easy.pdf) |
+| 7 | [QR Code Phishing: Scan to Compromise](reports/07-qr-code-phishing-scan-to-compromise.md) | Quishing + AiTM session theft | SIEM | 6/6 tasks, 100% | [PDF](Mbanjwa_May26_SOCTriage_Op07_Easy.pdf) |
+| 8 | [Finance Mailbox Takeover at MegaCorp Logistics](reports/08-finance-mailbox-takeover.md) | Endpoint compromise to BEC | SIEM, XDR, Email | 8/8 tasks, 56.08% | [PDF](Mbanjwa_May26_SOCTriage_Op08_Intermediate.pdf) |
+| 9 | [Cloud Identity Under Siege](reports/09-cloud-identity-under-siege.md) | Cross-service cloud intrusion | SIEM, XDR, Firewall, Cloud audit | 8/8 tasks, 48.71% | [PDF](Mbanjwa_May26_SOCTriage_Op09_Intermediate.pdf) |
 
 All nine closed **True Positive**. Task-completion rate reflects the platform's own grading of first-attempt accuracy on specific IOCs/artifacts, not whether the root cause was found — every case above was correctly resolved and correctly contained.
 
