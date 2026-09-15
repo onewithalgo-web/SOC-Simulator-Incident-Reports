@@ -1,5 +1,7 @@
 # SOC Simulator — Incident Triage Reports
 
+📄 **[Download the printable PDF version](SOC_Simulator_Incident_Reports.pdf)** — all 9 reports in one document, recruiter-friendly.
+
 Analyst write-ups for nine hands-on SOC investigations completed on [SOC Simulator](https://www.socsimulator.com), a browser-based training platform that places you inside realistic SIEM, XDR, email and cloud-audit consoles to investigate scenarios mapped to the MITRE ATT&CK framework.
 
 Each report below documents the scenario, the investigative approach taken across the available telemetry sources, the relevant ATT&CK technique mapping, and the outcome. These are training exercises, not live incidents — the scenario descriptions are platform-authored; the investigation narrative and ATT&CK mapping reflect my own analysis.
