@@ -1,10 +1,10 @@
 # SOC Simulator — Incident Triage Reports
 
-📄 **[Download the combined PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/SOC_Simulator_Incident_Reports.pdf)** — all 9 summaries in one document, recruiter-friendly.
+📄 **[Download the combined PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/SOC_Simulator_Incident_Reports.pdf)** — the operation summaries in one document, recruiter-friendly.
 
 📑 **Full per-operation incident reports** — each individual PDF (linked in the table below) follows a full SOC report template: metadata, executive summary, task-by-task triage, VirusTotal threat-intel checks, timeline, IOCs, a STIX 2.1 bundle, MITRE ATT&CK mapping, containment and recommendations, and real screenshots of the SOC Simulator evidence.
 
-Analyst write-ups for nine hands-on SOC investigations completed on [SOC Simulator](https://www.socsimulator.com), a browser-based training platform that places you inside realistic SIEM, XDR, email and cloud-audit consoles to investigate scenarios mapped to the MITRE ATT&CK framework.
+Analyst write-ups for hands-on SOC investigations completed on [SOC Simulator](https://www.socsimulator.com), a browser-based training platform that places you inside realistic SIEM, XDR, email and cloud-audit consoles to investigate scenarios mapped to the MITRE ATT&CK framework.
 
 Each report below documents the scenario, the investigative approach taken across the available telemetry sources, the relevant ATT&CK technique mapping, and the outcome. These are training exercises, not live incidents — the scenario descriptions are platform-authored; the investigation narrative and ATT&CK mapping reflect my own analysis.
 
@@ -22,7 +22,7 @@ Each report below documents the scenario, the investigative approach taken acros
 | 8 | [Finance Mailbox Takeover at MegaCorp Logistics](reports/08-finance-mailbox-takeover.md) | Endpoint compromise to BEC | SIEM, XDR, Email | 8/8 tasks, 56.08% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op08_Intermediate.pdf) |
 | 9 | [Cloud Identity Under Siege](reports/09-cloud-identity-under-siege.md) | Cross-service cloud intrusion | SIEM, XDR, Firewall, Cloud audit | 8/8 tasks, 48.71% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op09_Intermediate.pdf) |
 
-All nine closed **True Positive**. Task-completion rate reflects the platform's own grading of first-attempt accuracy on specific IOCs/artifacts, not whether the root cause was found — every case above was correctly resolved and correctly contained.
+Every operation so far closed **True Positive**. Task-completion rate reflects the platform's own grading of first-attempt accuracy on specific IOCs/artifacts, not whether the root cause was found — every case above was correctly resolved and correctly contained.
 
 ## Platform stats (as of this writing)
 
