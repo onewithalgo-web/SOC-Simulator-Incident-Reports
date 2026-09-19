@@ -21,14 +21,27 @@ Each report below documents the scenario, the investigative approach taken acros
 | 7 | [QR Code Phishing: Scan to Compromise](reports/07-qr-code-phishing-scan-to-compromise.md) | Quishing + AiTM session theft | SIEM | 6/6 tasks, 100% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op07_Easy.pdf) |
 | 8 | [Finance Mailbox Takeover at MegaCorp Logistics](reports/08-finance-mailbox-takeover.md) | Endpoint compromise to BEC | SIEM, XDR, Email | 8/8 tasks, 56.08% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op08_Intermediate.pdf) |
 | 9 | [Cloud Identity Under Siege](reports/09-cloud-identity-under-siege.md) | Cross-service cloud intrusion | SIEM, XDR, Firewall, Cloud audit | 8/8 tasks, 48.71% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op09_Intermediate.pdf) |
+| 10 | [Frozen Assets: The Snowflake Tenant Heist](reports/10-snowflake-tenant-heist.md) | Credential-driven warehouse exfiltration | SIEM, Cloud | 6/6 tasks, 70.83% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op10_Intermediate.pdf) |
+| 11 | [Fake Window, Real Loss: Browser-in-the-Browser Steam Phishing](reports/11-bitb-steam-phishing.md) | Browser-in-the-browser credential theft | SIEM, Email | 6/6 tasks, 61.18% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op11_Easy.pdf) |
+| 12 | [Storm-0501: Azure Storage Key Abuse and Cloud Ransom](reports/12-storm0501-cloud-ransom.md) | Cloud-native ransomware and extortion | SIEM, Cloud | 8/8 tasks, 69.05% - First Blood | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op12_Advanced.pdf) |
+| 13 | [QakBot bb02: Trace the Loader DLL to its C2](reports/13-qakbot-bb02-c2.md) | Signed-binary proxy execution to C2 | SIEM, XDR, Firewall | 6/6 tasks, 60% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op13_Easy.pdf) |
+| 14 | [Overdue Invoice, Compromised Endpoint](reports/14-finance-workstation-intrusion.md) | LNK loader to registry persistence | SIEM, Email | 6/6 tasks, 70% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op14_Easy.pdf) |
+| 15 | [Hijacked Discord Invite to ClickFix Loader](reports/15-discord-clickfix-loader.md) | ClickFix to AsyncRAT and infostealer | SIEM, Firewall | 7/7 tasks, 80.56% | [PDF](https://raw.githubusercontent.com/onewithalgo-web/SOC-Simulator-Incident-Reports/main/Mbanjwa_May26_SOCTriage_Op15_Easy.pdf) |
 
 Every operation so far closed **True Positive**. Task-completion rate reflects the platform's own grading of first-attempt accuracy on specific IOCs/artifacts, not whether the root cause was found — every case above was correctly resolved and correctly contained.
 
 ## Platform stats (as of this writing)
 
-- 14 operations completed, 25 of 85 MITRE ATT&CK techniques covered across 14 tactics
-- Investigation skill: Advanced (74/100) · Detection speed: Learning (32/100) · Precision: Competent (57/100)
-- Rank: Gatekeeper (Level 3)
+- 23 operations completed, 37 of 85 MITRE ATT&CK techniques covered across 14 tactics
+- Investigation skill: Expert (81/100) | Detection speed: Learning (29/100) | Precision: Competent (53/100)
+- Rank: Watchman (Level 4), with one First Blood (Storm-0501: Azure Storage Key Abuse and Cloud Ransom)
+
+
+## What these cases have in common
+
+In three of the six most recent investigations the decisive infrastructure had **no VirusTotal detections at all**. The Snowflake VPN exit nodes, the Storm-0501 federated-domain backdoor and the QakBot C2 were unflagged by every vendor, and the QakBot payload executed inside a legitimate signed Microsoft binary with a clean hash. Those cases were resolved on behaviour instead: authentication that skipped MFA, one identity appearing from distant addresses within the hour, a client application string absent from the baseline, a signed utility registering a file from a user directory, and a process opening sessions to addresses no DNS lookup preceded.
+
+Reputation data confirmed the phishing cases and contributed almost nothing to the rest. Two of the reports also end on control gaps rather than indicators - a proxy that correctly categorised a newly-registered domain and allowed it anyway, and a firewall rule named for web traffic that permitted a RAT beacon on port 6606 - which is the more useful finding to hand to whoever owns the policy.
 
 ## Skills demonstrated
 
