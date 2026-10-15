@@ -8,7 +8,9 @@ Analyst write-ups for hands-on SOC investigations completed on [SOC Simulator](h
 
 Each report below documents the scenario, the investigative approach taken across the available telemetry sources, the relevant ATT&CK technique mapping, and the outcome. These are training exercises, not live incidents — the scenario descriptions are platform-authored; the investigation narrative and ATT&CK mapping reflect my own analysis.
 
-## Reports
+## Full incident reports
+
+Each of these has a complete PDF report alongside the write-up: metadata, executive summary, task-by-task triage, VirusTotal checks, timeline, IOCs, a STIX 2.1 bundle, ATT&CK mapping, containment, recommendations and screenshots of the console evidence.
 
 | # | Operation | Attack Type | Tools | Score | Full report (PDF) |
 |---|-----------|-------------|-------|---------|-------------------|
@@ -30,25 +32,94 @@ Each report below documents the scenario, the investigative approach taken acros
 
 Every operation so far closed **True Positive**. Task-completion rate reflects the platform's own grading of first-attempt accuracy on specific IOCs/artifacts, not whether the root cause was found — every case above was correctly resolved and correctly contained.
 
+## Case write-ups
+
+Shorter analyst write-ups for the rest of the completed operations — scenario, the confirmed findings in order, the ATT&CK mapping, and what the case is actually worth remembering. Full PDF reports are being produced for these in batches.
+
+| # | Operation | Attack type | Level | Tools | Result |
+|---|-----------|-------------|-------|-------|--------|
+| 16 | [The Backdoored Browser Extension](reports/16-backdoored-browser-extension.md) | Trojanized extension, cookie theft | Easy | SIEM, Firewall | 6/6 tasks |
+| 17 | [Trusted Domain, Untrusted Destination](reports/17-open-redirect-o365-phish.md) | Open-redirect credential phishing | Easy | Email, SIEM | 6/6 tasks |
+| 18 | [Account Takeover: Impossible-Travel Sign-In](reports/18-impossible-travel-account-takeover.md) | Cloud account takeover | Easy | Cloud audit, SIEM | 6/6 tasks |
+| 19 | [Spring4Shell: Class-Loader RCE to Webshell](reports/19-spring4shell-webshell.md) | Public-app exploitation (CVE-2022-22965) | Medium | SIEM, Firewall | 6/6 tasks |
+| 20 | [Open Bucket, Open Books](reports/20-exposed-s3-bucket-data-leak.md) | Cloud storage exposure | Easy | Cloud audit | 4/4 tasks |
+| 21 | [OneNote Attachment to RAT](reports/21-onenote-attachment-rat.md) | Attachment-delivered RAT | Easy | Email, XDR | 6/6 tasks |
+| 22 | [Weaponized SVG: Embedded Code in an Image](reports/22-weaponized-svg-attachment.md) | SVG smuggling to scripted loader | Easy | Email, XDR | 6/6 tasks |
+| 23 | [EvilProxy AiTM: M365 Cookie Theft](reports/23-evilproxy-aitm-m365.md) | AiTM session-token theft | Medium | Email, SIEM, Firewall | 7/7 tasks |
+| 24 | [Illicit OAuth App-Consent Grant](reports/24-illicit-oauth-consent-entra.md) | Entra consent-grant campaign | Medium | Cloud audit, Email | 7/7 tasks |
+| 25 | [GoldPickaxe: The First iOS Trojan Stealing Your Face](reports/25-goldpickaxe-ios-biometric-theft.md) | Mobile trojan, biometric theft | Medium | SIEM, Firewall, Query | 7/7 tasks |
+| 26 | [Anatsa Banker: The Trojan Hiding in a Play Store Reader](reports/26-anatsa-google-play-dropper.md) | Android dropper to banking trojan | Easy | SIEM, Firewall | 6/6 tasks |
+| 27 | [Exposed .git Folder: Scanning the Web for Secrets](reports/27-exposed-git-config-credential-scrape.md) | Credential cascade from exposed repo | Easy | SIEM, Firewall | 7/7 tasks |
+| 28 | [FluBot: The Parcel-Delivery Text That Spreads Itself](reports/28-flubot-smishing-worm.md) | Smishing worm, DNS C2 | Easy | SIEM, Firewall | 6/6 tasks |
+| 29 | [The Template That Read the Disk](reports/29-crushftp-ssti-session-theft.md) | SSTI to session theft (CVE-2024-4040) | Easy | SIEM, Firewall | 6/6 tasks |
+| 30 | [Fighting Ursa: Car-for-Sale Lure to HeadLace](reports/30-headlace-apt28-car-lure.md) | APT28 DLL side-loading | Easy | XDR, Email, SIEM | 6/6 tasks |
+| 31 | [Copyright Lure to Rhadamanthys Stealer](reports/31-rhadamanthys-copyright-lure.md) | Search-order hijack to infostealer | Medium | SIEM, XDR, Firewall | 6/6 tasks |
+| 32 | [Fake Browser Update to Atomic macOS Stealer](reports/32-atomic-macos-stealer.md) | macOS keychain/browser theft | Easy | XDR, SIEM | 6/6 tasks |
+| 33 | [Malicious npm Package: Postinstall Infostealer](reports/33-malicious-npm-postinstall.md) | Software supply chain | Easy | XDR, SIEM | 6/6 tasks |
+| 34 | [Remcos RAT: Malicious Invoice Attachment](reports/34-remcos-invoice-attachment.md) | Commodity RAT via malspam | Easy | Email, XDR | 6/6 tasks |
+| 35 | [Purchase Order, Poisoned](reports/35-formbook-purchase-order.md) | Exploit to hollowed-process stealer | Easy | Email, XDR, SIEM | 6/6 tasks |
+| 36 | [Mounted and Loaded: ISO Container Bumblebee](reports/36-iso-container-bumblebee.md) | ISO delivery to Cobalt Strike | Medium | XDR, SIEM, Firewall, Query | 8/8 tasks |
+| 37 | [SCARLETEEL: AWS Fargate Breach to Crypto-Mining](reports/37-scarleteel-aws-fargate.md) | Container breakout to cloud IAM abuse | Medium | Cloud audit, SIEM, Firewall | 7/7 tasks |
+| 38 | [Ivanti CSA Exploit Chain](reports/38-ivanti-csa-exploit-chain.md) | Chained zero-days to rootkit | Hard | SIEM, XDR, Firewall, Query | 8/8 tasks |
+| 39 | [Hidden in the Pixels: LSB Steganography Exfil](reports/39-png-steganography-exfil.md) | Steganographic exfiltration | Medium | SIEM, Firewall, XDR, Query | 7/7 tasks |
+| 40 | [FortiOS Bypass to Hunters International Ransomware](reports/40-fortios-bypass-hunters-ransomware.md) | Edge bypass to ransomware | Easy | SIEM, Firewall, XDR | 6/6 tasks |
+| 41 | [UNC6384: Captive-Portal PlugX Implant](reports/41-plugx-captive-portal.md) | Captive-portal hijack to espionage implant | Easy | SIEM, XDR, Firewall | 7/7 tasks |
+| 42 | [PowerShell Download Cradle](reports/42-powershell-download-cradle.md) | Encoded cradle to beacon | Easy | XDR, SIEM | 6/6 tasks |
+| 43 | [Daemon in the Dark](reports/43-exposed-docker-api-kinsing.md) | Exposed container API to cryptomining | Easy | SIEM, Firewall, Cloud audit | 5/5 tasks |
+| 44 | [Bumblebee Returns: The Voicemail VBA Macro](reports/44-bumblebee-voicemail-macro.md) | Macro loader via signed-binary proxy | Easy | SIEM, Email, Firewall, XDR | 7/7 tasks |
+| 45 | [VPN Brute Force: Password Spray on the Portal](reports/45-vpn-password-spray.md) | Password spraying | Easy | SIEM, Firewall | 6/6 tasks |
+| 46 | [Open SMB Share: Unauthorized Data Access](reports/46-open-smb-share-exposure.md) | Over-permissioned share, insider access | Easy | SIEM, Firewall | 6/6 tasks |
+| 47 | [RDP Brute Force: Internet-Facing Server](reports/47-rdp-bruteforce-internet-facing.md) | Password guessing to interactive logon | Easy | SIEM | 6/6 tasks |
+| 48 | [DarkGate via Microsoft Teams](reports/48-darkgate-teams-lure.md) | Teams external-chat lure to loader | Medium | XDR, SIEM, Email | 7/7 tasks |
+| 49 | [Apache Path Traversal to RCE](reports/49-apache-path-traversal-rce.md) | CVE-2021-41773 to webshell | Easy | SIEM, Firewall | 6/6 tasks |
+| 50 | [WordPress Plugin RCE: Webshell on a Site](reports/50-wordpress-plugin-rce.md) | Upload bypass to webshell | Easy | SIEM | 7/7 tasks |
+| 51 | [Tomcat Manager Abuse: Weak Credentials](reports/51-tomcat-manager-weak-creds.md) | Default creds to WAR webshell, mining | Easy | SIEM | 6/6 tasks |
+| 52 | [Transfer Denied: The MOVEit Web Shell](reports/52-moveit-webshell-data-theft.md) | MFT SQLi to header-gated webshell | Easy | SIEM, Firewall | 6/6 tasks |
+| 53 | [Kernel Thread Impostor](reports/53-outlaw-ssh-cryptominer.md) | SSH brute force to disguised miner | Easy | SIEM, Firewall | 6/6 tasks |
+| 54 | [Wide Open](reports/54-exposed-elasticsearch-wiper.md) | Exposed datastore, mining and wiping | Easy | SIEM, Firewall | 6/6 tasks |
+| 55 | [Lazarus: ManageEngine RCE to QuiteRAT](reports/55-lazarus-manageengine-quiterat.md) | State-aligned espionage implant | Medium | SIEM, XDR, Firewall | 6/6 tasks |
+| 56 | [GootLoader: SEO Poisoning to Domain Control](reports/56-gootloader-seo-domain-control.md) | Drive-by loader to DC compromise | Medium | SIEM, XDR, Firewall | 7/7 tasks |
+| 57 | [Emotet Revival: Triage the November Loader](reports/57-emotet-revival-loader.md) | Thread hijack to encrypted C2 pool | Medium | SIEM, Email, Firewall | 7/7 tasks |
+| 58 | [Cisco IOS XE Web UI: Implant and Rogue Admin](reports/58-cisco-ios-xe-implant.md) | Network-device implant (CVE-2023-20198) | Medium | SIEM, Firewall | 6/6 tasks |
+| 59 | [Jenkins Arbitrary File Read to RCE](reports/59-jenkins-file-read-to-rce.md) | CI controller compromise (CVE-2024-23897) | Medium | SIEM, XDR, Query | 7/7 tasks |
+| 60 | [Cleo Harmony MFT: Cl0p Data Theft](reports/60-cleo-mft-clop.md) | MFT autorun abuse to exfiltration | Medium | SIEM, Firewall | 7/7 tasks |
+| 61 | [Ivanti Connect Secure: Auth Bypass to Webshell](reports/61-ivanti-connect-secure-webshell.md) | VPN appliance zero-day chain | Medium | SIEM, Firewall, XDR, Query | 7/7 tasks |
+| 62 | [Overnight on the DMZ Wiki](reports/62-confluence-ognl-china-chopper.md) | OGNL injection to China Chopper | Medium | SIEM, Firewall | 6/6 tasks |
+| 63 | [Edge Device Exploitation: VPN Zero-Day](reports/63-edge-device-vpn-zeroday.md) | Gateway RCE to internal pivot | Medium | SIEM, XDR, Firewall, Query | 8/8 tasks |
+| 64 | [Search Engine Poisoning to the Domain Controller](reports/64-seo-poisoning-to-domain-controller.md) | Sponsored-result ISO to ransomware | Medium | SIEM, XDR | 8/8 tasks |
+| 65 | [Operation Lunar Peek: PAN-OS Mgmt Takeover](reports/65-panos-lunar-peek-mgmt-takeover.md) | Firewall management-plane compromise | Hard | Firewall, SIEM | 8/8 tasks |
+| 66 | [Removable Media: USB Autorun Malware](reports/66-usb-autorun-infection.md) | Removable-media infection | Easy | XDR, SIEM, Query | 6/6 tasks |
+| 67 | [PAN-OS GlobalProtect Command Injection](reports/67-panos-globalprotect-command-injection.md) | CVE-2024-3400 to log-driven implant | Medium | SIEM, Firewall | 5/6 tasks |
+
+Operations marked *guided walkthrough* in their write-up are the platform's step-by-step format; the rest are open investigations where the console gives you the telemetry and nothing else.
+
 ## Platform stats (as of this writing)
 
-- 23 operations completed, 37 of 85 MITRE ATT&CK techniques covered across 14 tactics
-- Investigation skill: Expert (81/100) | Detection speed: Learning (29/100) | Precision: Competent (53/100)
-- Rank: Watchman (Level 4), with one First Blood (Storm-0501: Azure Storage Key Abuse and Cloud Ransom)
-
+- 67 operations completed, 56 of 95 MITRE ATT&CK techniques covered across 16 tactics
+- 435 of 436 tasks solved, 76.0% first-attempt accuracy
+- Investigation skill: Expert (89/100) | Precision: Advanced (64/100) | Consistency: Competent (57/100) | Detection speed: Learning (39/100)
+- Rank: Barbican (Level 6), with two First Bloods — first completion on the platform — including Storm-0501: Azure Storage Key Abuse and Cloud Ransom
 
 ## What these cases have in common
 
-In three of the six most recent investigations the decisive infrastructure had **no VirusTotal detections at all**. The Snowflake VPN exit nodes, the Storm-0501 federated-domain backdoor and the QakBot C2 were unflagged by every vendor, and the QakBot payload executed inside a legitimate signed Microsoft binary with a clean hash. Those cases were resolved on behaviour instead: authentication that skipped MFA, one identity appearing from distant addresses within the hour, a client application string absent from the baseline, a signed utility registering a file from a user directory, and a process opening sessions to addresses no DNS lookup preceded.
+Across the set, the decisive infrastructure is very often unflagged. The Snowflake VPN exit nodes, the Storm-0501 federated-domain backdoor and the QakBot C2 carried **no VirusTotal detections at all**, and the QakBot payload executed inside a legitimate signed Microsoft binary with a clean hash. Those cases were resolved on behaviour instead: authentication that skipped MFA, one identity appearing from distant addresses within the hour, a client application string absent from the baseline, a signed utility registering a file from a user directory, and a process opening sessions to addresses no DNS lookup preceded.
 
-Reputation data confirmed the phishing cases and contributed almost nothing to the rest. Two of the reports also end on control gaps rather than indicators - a proxy that correctly categorised a newly-registered domain and allowed it anyway, and a firewall rule named for web traffic that permitted a RAT beacon on port 6606 - which is the more useful finding to hand to whoever owns the policy.
+Three patterns repeat often enough to be worth naming:
+
+- **The abused thing is usually a feature, not a flaw.** Docker's API on 2375, Tomcat's WAR deployment, Cleo's autorun directory, an S3 bucket policy, a `postinstall` hook, an OAuth consent grant — in each case the product did exactly what it documents, and the compromise happened at configuration time.
+- **Signed binaries carry the payload.** DLL side-loading and search-order hijacking appear in five separate cases (HeadLace, PlugX, Rhadamanthys, Bumblebee, FormBook). File reputation is the wrong detection surface; what is anomalous is a signed binary running from a user-writable directory with an unexpected DLL beside it.
+- **Identity persistence outlives credential resets.** A recovery address, a registered MFA method, a consent grant, a rogue appliance admin — these survive the password reset that most playbooks treat as containment.
+
+Reputation data confirmed the phishing cases and contributed almost nothing to the rest. Several reports end on control gaps rather than indicators — a proxy that correctly categorised a newly-registered domain and allowed it anyway, a firewall rule named for web traffic that permitted a RAT beacon on port 6606, a missing account lockout policy — which is the more useful finding to hand to whoever owns the policy.
 
 ## Skills demonstrated
 
-- Alert triage and log correlation across SIEM, XDR, email and cloud-audit interfaces
-- Identity-centric incident response: OAuth/device-code abuse, AiTM session-token theft, MFA fatigue, impossible-travel account takeover
-- Endpoint investigation: PowerShell/LOLBin abuse, process injection, persistence mechanisms, infostealer behaviour
-- Ransomware kill-chain reconstruction: initial access through lateral movement to impact
+- Alert triage and log correlation across SIEM, XDR, email, firewall and cloud-audit interfaces
+- Identity-centric incident response: OAuth consent abuse, device-code phishing, AiTM session-token theft, MFA fatigue, impossible-travel account takeover
+- Endpoint investigation: PowerShell/LOLBin abuse, DLL side-loading, process injection and hollowing, persistence mechanisms, infostealer behaviour
+- Edge and appliance compromise: VPN, firewall, MFT and network-device exploitation, including chained zero-days and post-exploitation implants
+- Cloud and container investigation: IAM credential theft, metadata-service abuse, storage exposure, resource hijacking
+- Ransomware kill-chain reconstruction: initial access through lateral movement to impact, including cloud-native extortion with no encryptor binary
 - MITRE ATT&CK technique mapping for each investigated attack chain
 - Containment decision-making (the platform grades not just detection but choosing the action that actually evicts the attacker)
 
