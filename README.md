@@ -90,13 +90,15 @@ Shorter analyst write-ups for the rest of the completed operations — scenario,
 | 65 | [Operation Lunar Peek: PAN-OS Mgmt Takeover](reports/65-panos-lunar-peek-mgmt-takeover.md) | Firewall management-plane compromise | Hard | Firewall, SIEM | 8/8 tasks |
 | 66 | [Removable Media: USB Autorun Malware](reports/66-usb-autorun-infection.md) | Removable-media infection | Easy | XDR, SIEM, Query | 6/6 tasks |
 | 67 | [PAN-OS GlobalProtect Command Injection](reports/67-panos-globalprotect-command-injection.md) | CVE-2024-3400 to log-driven implant | Medium | SIEM, Firewall | 5/6 tasks |
+| 68 | [CI/CD Pipeline Hijack: GitHub Actions](reports/68-github-actions-pipeline-hijack.md) | Supply-chain tag hijack to CI secret leak | Intermediate | XDR, SIEM, Threat Intel | 8/8 tasks |
+| 69 | [Trust, Forged: Monitoring-Platform Backdoor](reports/69-solarwinds-sunburst-backdoor.md) | SUNBURST-style supply chain to forged SAML | Advanced | SIEM, Firewall, Cloud, Threat Intel | 7/7 tasks |
 
 Operations marked *guided walkthrough* in their write-up are the platform's step-by-step format; the rest are open investigations where the console gives you the telemetry and nothing else.
 
 ## Platform stats (as of this writing)
 
-- 67 operations completed, 56 of 95 MITRE ATT&CK techniques covered across 16 tactics
-- 435 of 436 tasks solved, 76.0% first-attempt accuracy
+- 69 operations completed
+- 450 of 451 tasks solved
 - Investigation skill: Expert (89/100) | Precision: Advanced (64/100) | Consistency: Competent (57/100) | Detection speed: Learning (39/100)
 - Rank: Barbican (Level 6), with two First Bloods (first completion on the platform): Storm-0501: Azure Storage Key Abuse and Cloud Ransom, and SCARLETEEL: AWS Fargate Breach to Crypto-Mining
 
