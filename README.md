@@ -59,7 +59,7 @@ Shorter analyst write-ups for the rest of the completed operations — scenario,
 | 34 | [Remcos RAT: Malicious Invoice Attachment](reports/34-remcos-invoice-attachment.md) | Commodity RAT via malspam | Easy | Email, XDR | 6/6 tasks |
 | 35 | [Purchase Order, Poisoned](reports/35-formbook-purchase-order.md) | Exploit to hollowed-process stealer | Easy | Email, XDR, SIEM | 6/6 tasks |
 | 36 | [Mounted and Loaded: ISO Container Bumblebee](reports/36-iso-container-bumblebee.md) | ISO delivery to Cobalt Strike | Medium | XDR, SIEM, Firewall, Query | 8/8 tasks |
-| 37 | [SCARLETEEL: AWS Fargate Breach to Crypto-Mining](reports/37-scarleteel-aws-fargate.md) | Container breakout to cloud IAM abuse | Medium | Cloud audit, SIEM, Firewall | 7/7 tasks |
+| 37 | [SCARLETEEL: AWS Fargate Breach to Crypto-Mining](reports/37-scarleteel-aws-fargate.md) | Container breakout to cloud IAM abuse | Medium | Cloud audit, SIEM, Firewall | 7/7 tasks - First Blood |
 | 38 | [Ivanti CSA Exploit Chain](reports/38-ivanti-csa-exploit-chain.md) | Chained zero-days to rootkit | Hard | SIEM, XDR, Firewall, Query | 8/8 tasks |
 | 39 | [Hidden in the Pixels: LSB Steganography Exfil](reports/39-png-steganography-exfil.md) | Steganographic exfiltration | Medium | SIEM, Firewall, XDR, Query | 7/7 tasks |
 | 40 | [FortiOS Bypass to Hunters International Ransomware](reports/40-fortios-bypass-hunters-ransomware.md) | Edge bypass to ransomware | Easy | SIEM, Firewall, XDR | 6/6 tasks |
@@ -98,7 +98,7 @@ Operations marked *guided walkthrough* in their write-up are the platform's step
 - 67 operations completed, 56 of 95 MITRE ATT&CK techniques covered across 16 tactics
 - 435 of 436 tasks solved, 76.0% first-attempt accuracy
 - Investigation skill: Expert (89/100) | Precision: Advanced (64/100) | Consistency: Competent (57/100) | Detection speed: Learning (39/100)
-- Rank: Barbican (Level 6), with two First Bloods — first completion on the platform — including Storm-0501: Azure Storage Key Abuse and Cloud Ransom
+- Rank: Barbican (Level 6), with two First Bloods (first completion on the platform): Storm-0501: Azure Storage Key Abuse and Cloud Ransom, and SCARLETEEL: AWS Fargate Breach to Crypto-Mining
 
 ## What these cases have in common
 

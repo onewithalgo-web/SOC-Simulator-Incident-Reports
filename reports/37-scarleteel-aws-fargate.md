@@ -1,6 +1,6 @@
 # SCARLETEEL: AWS Fargate Breach to Cloud Crypto-Mining
 
-**Platform:** SOC Simulator | **Tools:** Cloud audit, SIEM, Firewall | **Duration:** ~55m | **Verdict:** True Positive — 7/7 tasks
+**Platform:** SOC Simulator | **Tools:** Cloud audit, SIEM, Firewall | **Duration:** ~55m | **Verdict:** True Positive — 7/7 tasks | **First Blood**
 
 ## Scenario
 
