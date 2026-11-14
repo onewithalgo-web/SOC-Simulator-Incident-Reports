@@ -14,11 +14,11 @@ Each report below documents the scenario, the investigative approach taken acros
 
 | Metric | Value |
 | :--- | :--- |
-| Operations written up | **69** |
-| Closed True Positive | **69/69** |
-| Tasks answered correctly | **450/451** (99.8%) |
+| Operations written up | **79** |
+| Closed True Positive | **79/79** |
+| Tasks answered correctly | **506/507** (99.8%) |
 | First Blood | **2** |
-| Consoles used | SIEM (64) · Firewall (38) · XDR (31) · Email (15) · Cloud audit (10) · Query (8) · Threat Intel (2) |
+| Consoles used | SIEM (74) · Firewall (44) · XDR (35) · Email (16) · Cloud audit (12) · Query (9) · Threat Intel (3) |
 
 <details><summary>Index of all operations</summary>
 
@@ -93,6 +93,16 @@ Each report below documents the scenario, the investigative approach taken acros
 | 67 | [PAN-OS GlobalProtect: Command Injection (CVE-2024-3400)](reports/67-panos-globalprotect-command-injection.md) | SIEM, Firewall | 5/6 |
 | 68 | [CI/CD Pipeline Hijack: GitHub Actions Compromise (CVE-2025-30066)](reports/68-github-actions-pipeline-hijack.md) | XDR, SIEM, Threat Intel | 8/8 |
 | 69 | [Trust, Forged: The Monitoring-Platform Backdoor (SUNBURST-style)](reports/69-solarwinds-sunburst-backdoor.md) | SIEM, Firewall, Cloud audit, Threat Intel | 7/7 |
+| 70 | [Scheduled Task Persistence: The License Tool That Phoned Home Every 15 Minutes](reports/70-scheduled-task-persistence-beacon.md) | SIEM, XDR | 5/5 |
+| 71 | [TerminalFix: A Signed Binary, Three PNGs and a Python Reverse Tunnel](reports/71-terminalfix-png-python-tunnel.md) | XDR, SIEM, Firewall | 4/4 |
+| 72 | [DNS Tunneling: Covert Exfiltration from One Host](reports/72-dns-tunneling-single-host-exfil.md) | SIEM, Firewall | 6/6 |
+| 73 | [Exposed MongoDB: Open Database to Ransom Note](reports/73-exposed-mongodb-ransom-note.md) | SIEM, Firewall, Threat Intel | 6/6 |
+| 74 | [TeamFiltration: Password Spray to Forgotten Service Account Takeover](reports/74-teamfiltration-service-account-takeover.md) | Cloud audit, SIEM | 5/5 |
+| 75 | [Path Traversal to NTDS: Check Point Quantum VPN Leak (CVE-2024-24919)](reports/75-checkpoint-quantum-file-read-ntds.md) | SIEM, Firewall | 6/6 |
+| 76 | [Raspberry Robin: USB Worm to LOLBin Execution](reports/76-raspberry-robin-usb-worm.md) | XDR, SIEM | 6/6 |
+| 77 | [Exposed Jupyter Notebook: Cryptojacking a Data Server](reports/77-exposed-jupyter-cryptojacking.md) | SIEM, Firewall | 6/6 |
+| 78 | [MSP360 and ScreenConnect: Phishing Installer to Dual-RMM Persistence](reports/78-msp360-screenconnect-dual-rmm.md) | Email, XDR, SIEM, Firewall | 5/5 |
+| 79 | [Passkey Help-Desk Vishing: Rogue MFA Registration to SharePoint Data Theft](reports/79-passkey-helpdesk-vishing-rogue-mfa.md) | SIEM, Cloud audit, Query | 7/7 |
 
 </details>
 <!-- SOC-STATS:END -->
@@ -186,10 +196,10 @@ Operations marked *guided walkthrough* in their write-up are the platform's step
 
 ## Platform stats (as of this writing)
 
-- 69 operations completed
-- 450 of 451 tasks solved
-- Investigation skill: Expert (89/100) | Precision: Advanced (64/100) | Consistency: Competent (57/100) | Detection speed: Learning (39/100)
-- Rank: Barbican (Level 6), with two First Bloods (first completion on the platform): Storm-0501: Azure Storage Key Abuse and Cloud Ransom, and SCARLETEEL: AWS Fargate Breach to Crypto-Mining
+- 79 operations completed
+- 506 of 507 tasks solved
+- Investigation skill: Expert (90/100) | Precision: Advanced (66/100) | Consistency: Advanced (62/100) | Detection speed: Competent (44/100)
+- Rank: Portcullis (Level 7), with two First Bloods (first completion on the platform): Storm-0501: Azure Storage Key Abuse and Cloud Ransom, and SCARLETEEL: AWS Fargate Breach to Crypto-Mining
 
 ## What these cases have in common
 
