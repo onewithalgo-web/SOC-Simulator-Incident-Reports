@@ -191,6 +191,16 @@ Shorter analyst write-ups for the rest of the completed operations — scenario,
 | 67 | [PAN-OS GlobalProtect Command Injection](reports/67-panos-globalprotect-command-injection.md) | CVE-2024-3400 to log-driven implant | Medium | SIEM, Firewall | 5/6 tasks |
 | 68 | [CI/CD Pipeline Hijack: GitHub Actions](reports/68-github-actions-pipeline-hijack.md) | Supply-chain tag hijack to CI secret leak | Intermediate | XDR, SIEM, Threat Intel | 8/8 tasks |
 | 69 | [Trust, Forged: Monitoring-Platform Backdoor](reports/69-solarwinds-sunburst-backdoor.md) | SUNBURST-style supply chain to forged SAML | Advanced | SIEM, Firewall, Cloud, Threat Intel | 7/7 tasks |
+| 70 | [Scheduled Task Persistence: Recurring Beacon on a Host](reports/70-scheduled-task-persistence-beacon.md) | Scheduled-task persistence to HTTPS beacon | Easy | SIEM, XDR | 5/5 tasks |
+| 71 | [TerminalFix: Steganographic PNG Payload to a Python Reverse Tunnel](reports/71-terminalfix-png-python-tunnel.md) | Signed-binary abuse to reverse tunnel | Easy | XDR, SIEM, Firewall | 4/4 tasks |
+| 72 | [DNS Tunneling: Covert Exfiltration from One Host](reports/72-dns-tunneling-single-host-exfil.md) | Data exfiltration over DNS | Easy | SIEM, Firewall | 6/6 tasks |
+| 73 | [Exposed MongoDB: Open Database to Ransom Note](reports/73-exposed-mongodb-ransom-note.md) | Open datastore, bulk read and wiper | Easy | SIEM, Firewall, Threat Intel | 6/6 tasks |
+| 74 | [TeamFiltration: Password Spray to Service Account Takeover](reports/74-teamfiltration-service-account-takeover.md) | Password spray to forgotten service account | Easy | Cloud audit, SIEM | 5/5 tasks |
+| 75 | [Path Traversal to NTDS: Check Point Quantum VPN Leak](reports/75-checkpoint-quantum-file-read-ntds.md) | CVE-2024-24919 to AD database theft | Medium | SIEM, Firewall | 6/6 tasks |
+| 76 | [Raspberry Robin: USB Worm to LOLBin Execution](reports/76-raspberry-robin-usb-worm.md) | Removable-media worm via signed binaries | Medium | XDR, SIEM | 6/6 tasks |
+| 77 | [Exposed Jupyter Notebook: Cryptojacking a Data Server](reports/77-exposed-jupyter-cryptojacking.md) | Open notebook API to cryptomining | Easy | SIEM, Firewall | 6/6 tasks |
+| 78 | [MSP360 and ScreenConnect: Phishing Installer to Dual-RMM Persistence](reports/78-msp360-screenconnect-dual-rmm.md) | Phishing link to two remote-management agents | Medium | Email, XDR, SIEM, Firewall | 5/5 tasks |
+| 79 | [Passkey Help-Desk Vishing: Rogue MFA Registration to SharePoint Data Theft](reports/79-passkey-helpdesk-vishing-rogue-mfa.md) | Voice phishing to rogue MFA and data theft | Medium | SIEM, Cloud audit, Query | 7/7 tasks |
 
 Operations marked *guided walkthrough* in their write-up are the platform's step-by-step format; the rest are open investigations where the console gives you the telemetry and nothing else.
 
